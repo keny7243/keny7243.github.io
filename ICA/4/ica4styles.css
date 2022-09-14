@@ -10,12 +10,10 @@ html {
   background-color: #ccc;
 }
 
-/*||setup of the card container*/
-/*||header and footer*/
-/*||main business card contents*/
 
+/*||setup of the card container--------------------------------------------------------------------*/
 
-/*border radius = rounded corners*/
+/*card border radius = rounded corners*/
 .card {
   width: 35em;
   height: 22em;
@@ -24,6 +22,9 @@ html {
   border: 0.2em solid black;
   border-radius: 1.5em;
 }
+
+
+/*||header and footer------------------------------------------------------------------------------*/
 
 /*linear gradient, from dark to light*/
 .card header {
@@ -37,28 +38,46 @@ html {
   border-radius: 0 0 1.5em 1.5em;
 }
 
+/*5em total height - 3em content, 2em padding*/
+.card header, .card footer {
+  height: 3em;
+  padding: 1em;
+}
+
+/*how to calculate line-height???*/
+.card footer p {
+  font-size: 1.5em;
+  line-height: 1.75em;
+}
+
+
+/*||main business card contents------------------------------------------------------------------*/
+
 /*height will stay with container, moving it to the right of the container*/
 .card article img {
   max-height: 100%;
   float: right;
 }
 
-/*content height of 0.3 ems?????*/
-.card header, .card footer {
-  height: 5em;
-  content-height: 3em;
-  padding: 1em;
-}
-
+/*set margin for p and h2*/
 h2, p {
-  margin: 0px;
+  margin: 0;
 }
 
 /*semi-transparent black background*/
-article {
+.card article {
   height: 12em;
-  background-color: rgba(0,0,0,0.5);; 
+  background-color: rgba(0,0,0,0.45);; 
 }
 
+/*h2 font-size and line height to be at center*/
+h2 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
 
-Write a ruleset that gives the <h2> an effective font size of 20px (but expressed in ems) and an appropriate line height to place it in the center of the header's content box. Recall from earlier that the content box height should be 30px — this gives you all the numbers you need to calculate the line height.
+/*gave article p padding to align with other headings and changed to light color*/
+.card article p {
+  padding: 1.2em;
+  color: white;
+}
