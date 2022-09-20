@@ -40,7 +40,7 @@ h1 {
 
 /* Your CSS below here */
 article {
-  background: linear-gradient(rgb(0,0,0,.5), rgb(0,0,0,0)) top/200px no-repeat
+  background-image: linear-gradient(rgb(0,0,0,.5), rgb(0,0,0,0)) top/200px no-repeat
    url("./ica5IMG/ica5TopImage.png") top contain no-repeat
    linear-gradient(rgb(0,0,0,0), rgb(0,0,0,.5)) bottom/200px no-repeat
    url("./ica5IMG/ica5BottomImage.png") bottom contain no-repeat, white;
@@ -51,5 +51,5 @@ article {
 
 h1 {
   background-image: url("ica5IMG/ica5Logo.png");
-  filter: drop-shadow (3px black);
+  filter: drop-shadow(3px black);
 }
