@@ -1,20 +1,20 @@
+* {
+    font-family: 'Ubuntu';
+    font-style: normal;
+}
+
 h1 {
-font-family: 'Ubuntu';
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 55px;
-color: #0A152F;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 55px;
+    color: #0A152F;
 }
 
 h2 {
-    font-family: 'Ubuntu';
-font-style: normal;
-font-weight: 500;
-font-size: 36px;
-line-height: 41px;
-
-color: #0A152F;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 41px;
+    color: #0A152F;
 }
 
 hr {    
@@ -22,78 +22,50 @@ hr {
 }
 
 h3 {
-    font-family: 'Ubuntu';
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 28px;
-
-color: #0A152F;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #0A152F;
 }
 
 h4, h5, h6 {
-    font-family: 'Ubuntu';
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 21px;
-
-color: #0A152F;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #0A152F;
 }
 
 p {
-    font-family: 'Ubuntu';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
-
-color: #0A152F;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #0A152F;
 }
 
 .link1:link {
     color: #F36D35;
-    font-family: 'Ubuntu';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
-text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
 }
 
 .link1:visited {
     color: #F36D35;
-    font-family: 'Ubuntu';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
-text-decoration: underline;
+    text-decoration: underline;
 }
 
 .link1:hover {
-    font-family: 'Ubuntu';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
-text-decoration: none;
-color: #F3B167;
+    text-decoration: none;
+    color: #F3B167;
 }
 
 .link1:active {
-    font-family: 'Ubuntu';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
-text-decoration: underline;
-color: #F3B167;
+    text-decoration: underline;
+    color: #F3B167;
 }
 
 .button1 {
-    font-family: 'Ubuntu';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -106,49 +78,25 @@ color: #F3B167;
 }
 
 .button1:hover {
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    color: #FFFFFF;
     background: #F3B167;
-border-radius: 15px;
-padding: 15px 32px; 
-border: none;
 }
 
 .button1:active {
-    font-family: 'Ubuntu';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
-text-align: center;
-text-decoration-line: underline;
-color: #FFFFFF;
-background: #F3B167;
-border-radius: 15px;
-padding: 15px 32px; 
-border: none;
-
+    text-decoration: underline;
+    background: #F3B167;
 }
+
 ol {
-    font-family: 'Ubuntu';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
-color: #0A152F;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #0A152F;
 }
 
 ul {
-    font-family: 'Ubuntu';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
-color: #0A152F;
-list-style-type: circle;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #0A152F;
+    list-style-type: circle;
 }
