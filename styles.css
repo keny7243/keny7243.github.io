@@ -1,3 +1,147 @@
+h1 {
+font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 55px;
+color: #0A152F;
+}
+
+h2 {
+    font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 41px;
+
+color: #0A152F;
+}
+
+hr {    
+    border: 1px solid #F3B167;
+}
+
+h3 {
+    font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+
+color: #0A152F;
+}
+
+h4, h5, h6 {
+    font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+
+color: #0A152F;
+}
+
+p {
+    font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+
+color: #0A152F;
+}
+
+a:link {
+    color: #F36D35;
+    font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+text-decoration: none;
+
+}
+
+
+
+a:hover {
+    font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+text-decoration: none;
+color: #F3B167;
+}
+
+a:active {
+    font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+text-decoration-line: underline;
+color: #F3B167;
+}
+
+.button1 {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #0A152F;
+    border: none;
+    border-radius: 15px;   
+    padding: 15px 32px; 
+}
+
+.button1:hover {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #F3B167;
+border-radius: 15px;
+padding: 15px 32px; 
+border: none;
+}
+
+.button1:active {
+    font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+text-align: center;
+text-decoration-line: underline;
+color: #FFFFFF;
+background: #F3B167;
+border-radius: 15px;
+padding: 15px 32px; 
+border: none;
+
+}
 ol {
-    list-style-type: ethiopic-numeric;
+    font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: #0A152F;
+}
+
+ul {
+    font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: #0A152F;
+list-style-type: circle;
 }
