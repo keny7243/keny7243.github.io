@@ -51,7 +51,7 @@ line-height: 16px;
 color: #0A152F;
 }
 
-a:link {
+.link1:link {
     color: #F36D35;
     font-family: 'Ubuntu';
 font-style: normal;
@@ -59,12 +59,19 @@ font-weight: 400;
 font-size: 14px;
 line-height: 16px;
 text-decoration: none;
-
 }
 
+.link1:visited {
+    color: #F36D35;
+    font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+text-decoration: underline;
+}
 
-
-a:hover {
+.link1:hover {
     font-family: 'Ubuntu';
 font-style: normal;
 font-weight: 400;
@@ -74,13 +81,13 @@ text-decoration: none;
 color: #F3B167;
 }
 
-a:active {
+.link1:active {
     font-family: 'Ubuntu';
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
 line-height: 16px;
-text-decoration-line: underline;
+text-decoration: underline;
 color: #F3B167;
 }
 
