@@ -42,19 +42,12 @@ p {
     color: #0A152F;
 }
 
-
-
 .link1:link {
     color: #F36D35;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     text-decoration: none;
-}
-
-.link1:visited {
-    color: #F36D35;
-    text-decoration: underline;
 }
 
 .link1:hover {
@@ -82,14 +75,8 @@ p {
 
 .button1:hover {
     background: #F3B167;
-    text-decoration: none;
 }
-/**
-.button1:visited {
-    text-decoration: underline;
-    background: red;
-}
-**/
+
 ol {
     font-weight: 400;
     font-size: 14px;
