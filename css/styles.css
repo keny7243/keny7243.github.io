@@ -42,6 +42,11 @@ p {
     color: #0A152F;
 }
 
+.link1:visited {
+    color: #F36D35;
+    text-decoration: underline;
+}
+
 .link1:link {
     color: #F36D35;
     font-weight: 400;
@@ -58,11 +63,6 @@ p {
 .link1:active {
     text-decoration: underline;
     color: #F3B167;
-}
-
-.link1:visited {
-    color: #F36D35;
-    text-decoration: underline;
 }
 
 .button1 {
@@ -82,12 +82,12 @@ p {
     background: #F3B167;
     text-decoration: none;
 }
-
+/**
 .button1:visited {
     text-decoration: underline;
     background: red;
 }
-
+**/
 ol {
     font-weight: 400;
     font-size: 14px;
