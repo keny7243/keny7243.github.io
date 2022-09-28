@@ -50,11 +50,6 @@ p {
     text-decoration: none;
 }
 
-.link1:visited {
-    color: #F36D35;
-    text-decoration: underline;
-}
-
 .link1:hover {
     text-decoration: none;
     color: #F3B167;
@@ -63,6 +58,11 @@ p {
 .link1:active {
     text-decoration: underline;
     color: #F3B167;
+}
+
+.link1:visited {
+    color: #F36D35;
+    text-decoration: underline;
 }
 
 .button1 {
@@ -83,7 +83,7 @@ p {
     text-decoration: none;
 }
 
-.button1:active {
+.button1:visited {
     text-decoration: underline;
     background: #F3B167;
 }
