@@ -42,10 +42,7 @@ p {
     color: #0A152F;
 }
 
-.link1:visited {
-    color: #F36D35;
-    text-decoration: underline;
-}
+
 
 .link1:link {
     color: #F36D35;
@@ -53,6 +50,11 @@ p {
     font-size: 14px;
     line-height: 16px;
     text-decoration: none;
+}
+
+.link1:visited {
+    color: #F36D35;
+    text-decoration: underline;
 }
 
 .link1:hover {
