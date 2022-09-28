@@ -35,7 +35,7 @@ h4, h5, h6 {
     color: #0A152F;
 }
 
-p {
+.ptext {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
