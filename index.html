@@ -8,14 +8,21 @@
     <meta name="description" content="Webpage Portfolio Development">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <title>Kerstin Nyquist</title>
 </head>
 <body>
     <nav>
+        <!-- https://www.youtube.com/watch?v=oLgtucwjVII&t=408s
+            how to add a hamburger bar, and the navbar in different states -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
         <a href="index.html" class="logo">
             <img src="img/NyquistLogo.png">
         </a>
-    <ul>
+    <ul id="navbarlinks">
         <li><a href="research.html">Research</a></li>
         <li><a href="experiments.html">Experiments</a></li>
         <li><a href="https://kerstinnyquist.myportfolio.com/">Portfolio</a></li>
