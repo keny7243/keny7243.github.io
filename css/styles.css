@@ -93,6 +93,11 @@ ul {
 }
 #navbarlinks {
     list-style-type: none;
+        width: 100%;
+        background: white;
+        transition: all .5s;
+        position:fixed;
+        top: 80px;
 }
 
 #navbarlinks a{
@@ -112,11 +117,12 @@ ul {
         grid-template-columns: 1fr;
     }
 nav {
-        padding: 10px;
         background-color: rgb(241, 241, 241);
+        padding: 5px;
         position: sticky;
         top: 0;
         width: 100%;
+        height: 50px;
 }
 
 .checkbtn {
@@ -124,12 +130,21 @@ nav {
     color: gray;
     float:right;
     margin-right: 40px;
+    display:block;
 }
 #check {
     display:none;
 }
-.checkbtn {
-    display:block;
+
+#navbarlinks li {
+    display: block;
+    margin: 50px 40px;
+    text-align:right;
+}
+
+
+#check:checked ~ #navbarlinks ul {
+    left: 0;
 }
 
 @media only screen and (min-width:750px){
@@ -138,13 +153,18 @@ nav {
         grid-template-columns: 2fr 1fr;
         gap: 20px;
     }
-    #navbarlinks {
-        float: right;
-        margin-right: 20px;
-    }
+    #navbarlinks {}
+       
     #navbarlinks li {
         display: inline-block;
         margin: 0 5px;
+        float: right;
+        margin-right: 20px;
+        transition: none;
+        background: none;
+    }
+    .checkbtn {
+        display: none;
     }
     
 }
