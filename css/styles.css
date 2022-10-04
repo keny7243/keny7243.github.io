@@ -91,14 +91,16 @@ ul {
     color: #0A152F;
     list-style-type: circle;
 }
-#navbarlinks {
-    list-style-type: none;
-        width: 100%;
-        background: white;
-        transition: all .5s;
-        position:fixed;
-        top: 80px;
+
+nav {
+    background-color: #0A152F;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 50px;
 }
+
 
 #navbarlinks a{
     color: gray;
@@ -116,14 +118,7 @@ ul {
         display:grid;
         grid-template-columns: 1fr;
     }
-nav {
-        background-color: rgb(241, 241, 241);
-        padding: 5px;
-        position: sticky;
-        top: 0;
-        width: 100%;
-        height: 50px;
-}
+
 
 .checkbtn {
     font-size: 30px;
@@ -136,15 +131,61 @@ nav {
     display:none;
 }
 
-#navbarlinks li {
+#navbarlinks {
+    list-style-type: none;
+}
+
+#check:not(:checked) ~ #navbarlinks li {
+    display:none;
+}
+#check:checked ~ #navbarlinks {
+   
+    
+}
+#check:checked ~ #navbarlinks li {
+    margin: 20px 30px;
     display: block;
-    margin: 50px 40px;
     text-align:right;
+    top: 70px;
+    background: white;
+    transition: all .5s;
+    position:fixed;
+    right: 0;
 }
 
 
-#check:checked ~ #navbarlinks ul {
-    left: 0;
+.container{
+    grid-template-rows: 1fr 1fr 1fr;
+    background: gray;
+}
+
+.col{
+    height: 30em;
+    box-sizing: border-box;
+    padding: .5em;
+}
+
+.col:nth-child(1){
+    background: #F36D35;
+}
+.col:nth-child(2){
+    background: #F3B167;
+}
+.col:nth-child(3){
+    background: #FEE0C4;
+}
+.col h3{
+    text-align: center;
+}
+.col img {
+    width: 20em;
+}
+
+.caption{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #0A152F;
 }
 
 @media only screen and (min-width:750px){
@@ -153,18 +194,29 @@ nav {
         grid-template-columns: 2fr 1fr;
         gap: 20px;
     }
-    #navbarlinks {}
+    #navbarlinks {
+        top:0;
+        display: inline-block;
+    }
        
     #navbarlinks li {
-        display: inline-block;
         margin: 0 5px;
-        float: right;
-        margin-right: 20px;
+        margin-right: 60px;
         transition: none;
         background: none;
     }
     .checkbtn {
         display: none;
+    }
+    .container{
+        height: 400px;
+        width:100%;
+        margin: 120px auto;
+        display:flex;
+    }
+    .col{
+        height: 100%;
+        flex:1;
     }
     
 }
