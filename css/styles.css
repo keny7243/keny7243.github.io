@@ -111,18 +111,15 @@ nav {
 #navbarlinks a:hover{
     color: #F3B167;
 }
-.me{
-    max-width: 400px;
-}
+
 .grid{
         display:grid;
         grid-template-columns: 1fr;
     }
 
-
 .checkbtn {
     font-size: 30px;
-    color: gray;
+    color: #FEE0C4;
     float:right;
     margin-right: 40px;
     display:block;
@@ -138,10 +135,7 @@ nav {
 #check:not(:checked) ~ #navbarlinks li {
     display:none;
 }
-#check:checked ~ #navbarlinks {
-   
-    
-}
+
 #check:checked ~ #navbarlinks li {
     margin: 20px 30px;
     display: block;
@@ -157,19 +151,21 @@ nav {
 .container{
     grid-template-rows: 1fr 1fr 1fr;
     background: gray;
+    width: 100%;
 }
 
 .col{
     height: 30em;
     box-sizing: border-box;
     padding: .5em;
+    position: relative;
 }
 
 .col:nth-child(1){
     background: #F36D35;
 }
 .col:nth-child(2){
-    background: #F3B167;
+    background: #8E3529;
 }
 .col:nth-child(3){
     background: #FEE0C4;
@@ -188,10 +184,32 @@ nav {
     color: #0A152F;
 }
 
+.gsetup{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+  }
+.gcolor {
+  background: rgba (0, 255, 0, 0.5);
+  z-index: 2;
+  width: 100%;
+}
+
+.col img{
+    height:auto;
+    position: absolute;
+    right:0;
+    bottom:0;
+}
+
 @media only screen and (min-width:750px){
     .grid {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr;
         gap: 20px;
     }
     #navbarlinks {
@@ -211,13 +229,15 @@ nav {
     .container{
         height: 400px;
         width:100%;
-        margin: 120px auto;
+        margin: 50px auto;
         display:flex;
     }
     .col{
         height: 100%;
         flex:1;
     }
-    
+    .gsetup {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+    }
 }
-
