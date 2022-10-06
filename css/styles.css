@@ -5,6 +5,9 @@
 
 
 /* |General Styling|*/
+body{
+    margin: 5px;
+}
 h1 {
     font-weight: 700;
     font-size: 48px;
@@ -114,7 +117,7 @@ nav {
     height:160px;
     background:#8E3529;
     top: 50px;
-    right: -100%;
+    right: -110%;
     text-align: center;
     transition: all .5s;
     z-index:1;
@@ -125,9 +128,9 @@ nav {
     font-size: 20px;
     line-height: 40px;
     text-decoration: none;
+    padding: 7px 13px;
     text-transform: uppercase;
 }
-
 #navbarlinks a:hover{
     color: #F3B167;
 }
@@ -144,10 +147,6 @@ nav {
     cursor:pointer;
 }
 #check {
-    display:none;
-}
-
-#check:not(:checked) ~ #navbarlinks {
     display:none;
 }
 
@@ -177,10 +176,10 @@ nav {
     background: #F36D35;
 }
 .col:nth-child(2){
-    background: #8E3529;
+    background: #FEE0C4;
 }
 .col:nth-child(3){
-    background: #FEE0C4;
+    background: #8E3529;
 }
 .col h3{
     text-align: center;
@@ -219,20 +218,25 @@ nav {
 /*|||Computer Styling|||*/
 @media only screen and (min-width:750px){
     /*|Nav Styling|*/
-    #navbarlinks {
-        top:0;
-        float:right;
-        margin-right: 20px;
-    }
+      
     #navbarlinks li {
         display: inline-block;
         margin: 0 5px;
-        transition: none;
-        background: none;
     }
     .checkbtn {
         display: none;
     }
+
+    #navbarlinks {
+        top:0;
+        right: 0;
+        float:right;
+        margin-right: 20px;
+        background-color: transparent;
+        text-align: right;
+        transition: none;
+    }
+    
     /*|Index|*/
       .grid {
         display: grid;
