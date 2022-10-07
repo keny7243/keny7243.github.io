@@ -18,12 +18,14 @@ h1 {
 h2 {
     font-weight: 500;
     font-size: 36px;
-    line-height: 41px;
+    line-height: 38px;
     color: #0A152F;
+    margin: 10px;
 }
 
 hr {    
     border: 1px solid #F3B167;
+    width: 100%;
 }
 
 h3 {
@@ -184,7 +186,7 @@ nav {
 .col:nth-child(3){
     background: #8E3529;
 }
-.col h3{
+.col h2{
     text-align: center;
 }
 .indeximg {
@@ -226,7 +228,9 @@ nav {
 
 /*before for styling?
 more info on ":before" : https://developer.mozilla.org/en-US/docs/Web/CSS/::before 
-how I did the overlay of color: https://stackoverflow.com/questions/44673676/how-to-add-color-overlay-on-an-image */
+how I did the overlay of color: https://stackoverflow.com/questions/44673676/how-to-add-color-overlay-on-an-image 
+extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72Xhs */
+/* absolutely positioned child elements do not affect their parent's height*/
 .cimg:before{
     content:"";
     position: absolute;
@@ -291,12 +295,12 @@ how I did the overlay of color: https://stackoverflow.com/questions/44673676/how
       .grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 5px;
     }
     .container{
         height: 400px;
         width:100%;
-        margin: 50px auto;
+        margin: 30px auto;
         display:flex;
     }
     .col{
