@@ -209,7 +209,7 @@ nav {
 /*|Secondary Page Setups*/
 .gsetup{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 470px;
     width: 100%;
 }
 .gallery {
@@ -250,9 +250,11 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
     text-align: center;
     color: #FEE0C4;
     z-index:81;
-    top: 235px;
+    top: 190px;
     font-size: 18px;
     opacity: 0;
+    width: 460px;
+    padding: 5px;
 }
 
 /* "hover" for mobile: https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices */
@@ -323,7 +325,8 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
     }
 
     .desc {
-        top: 210px;
+        top: 175px;
+        width: 410px;
     }
 
     .gallery:hover .cimg:before {       
