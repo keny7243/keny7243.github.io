@@ -211,13 +211,17 @@ nav {
     width: 100%;
 }
 .gallery {
+    position: relative;
     margin: 2px;
     border: none;
+    text-align: center;
   }
 
+/*centering an image using text-align: https://blog.hubspot.com/website/center-an-image-in-html*/
 .cimg{
     text-align: center;
     position: relative;
+    z-index:13;
 }
 
 /*before for styling?
@@ -228,16 +232,32 @@ how I did the overlay of color: https://stackoverflow.com/questions/44673676/how
     position: absolute;
     height:470px;
     width:470px;
-    background: rgba(243,177,103,0.8);
+    background: rgba(142,53,41,0.8);
     z-index:80;
+    opacity:0;
 }
 
-#gimg {
+.gimg {
     width: 470px;
 }
 
 .desc {
-    display: none;
+    position: absolute;
+    text-align: center;
+    color: #FEE0C4;
+    z-index:81;
+    top: 235px;
+    font-size: 18px;
+    opacity: 0;
+}
+
+/* "hover" for mobile: https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices */
+.gallery:hover, .gallery:active .cimg:before {       
+    opacity: 1; 
+}
+
+.gallery:hover, .gallery:active .desc {
+    opacity: 1;
 }
 
 /*|||Computer Styling|||*/
@@ -289,12 +309,23 @@ how I did the overlay of color: https://stackoverflow.com/questions/44673676/how
         grid-template-rows: 1fr 1fr;
         width: 100%;
     }
-    #gimg {
+    .gimg {
         width: 420px;
     }
 
     .cimg:before{
         height:420px;
         width:420px;
+    }
+
+    .desc {
+        top: 210px;
+    }
+
+    .gallery:hover .cimg:before {       
+        opacity: 1; 
+    }
+    .gallery:hover .desc{
+        opacity: 1;
     }
 }
