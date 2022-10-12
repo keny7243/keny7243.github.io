@@ -6,11 +6,16 @@ function giveAlert () {
 }*/
 
 
-const p = document.querySelector('p');
-p.addEventListener('mousemove', colorChange);
+let p = document.querySelector('p');
+p.addEventListener('dblclick', colorUp);
+p.addEventListener('click', colorDown);
 
-function colorChange () {
+function colorUp () {
     p.style.color = 'orange';
+}
+
+function colorDown () {
+    p.style.color = 'blue';
 }
 
 
