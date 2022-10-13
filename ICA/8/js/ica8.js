@@ -7,14 +7,14 @@ function giveAlert () {
 
 
 let p = document.querySelector('p');
-p.addEventListener('dblclick', colorUp);
-p.addEventListener('click', colorDown);
+p.addEventListener('dblclick', colorDbl);
+p.addEventListener('click', colorCl);
 
-function colorUp () {
+function colorDbl () {
     p.style.color = 'orange';
 }
 
-function colorDown () {
+function colorCl () {
     p.style.color = 'blue';
 }
 
