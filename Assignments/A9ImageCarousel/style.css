@@ -1,6 +1,11 @@
 h1 {
-  font-family: helvetica, arial, sans-serif;
+  font-family: 'Ubuntu';
+  font-style: normal;
   text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 55px;
+  color: #0A152F;
 }
 
 body {
@@ -25,14 +30,24 @@ body {
 }
 
 button {
-  border: 0;
-  background: rgba(150,150,150,0.6);
-  text-shadow: 1px 1px 1px white;
-  border: 1px solid #999;
   position: absolute;
   cursor: pointer;
   top: 2px;
   left: 2px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #0A152F;
+  border: none;
+  border-radius: 15px;   
+  padding: 10px 25px; 
+  text-decoration: none;
+}
+
+button:hover {
+  background: #F3B167;
 }
 
 .thumb-bar img {
