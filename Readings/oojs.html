@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+  </body>
+
+    <script>
+        /*https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics*/
+const person =  {
+  name: {
+    first: "Bob",
+    last: "Smith",
+  },
+  age: 32,
+  bio() {
+    console.log(`${this.name.first} ${this.name.last} is ${this.age} years old.`);
+  },
+  introduceSelf() {
+    console.log(`Hi! I'm ${this.name.first}.`);
+  },
+};
+const myDataName = "height";
+const myDataValue = "1.75m";
+person[myDataName] = myDataValue;
+
+const myNotification = new Notification("Hello!");
+
+
+
+
+/* https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes */
+const myDate = new Date();
+let object = myDate;
+do {
+  object = Object.getPrototypeOf(object);
+  console.log(object);
+} while (object);
+
+/* creating an object with personPrototype as its prototype;
+shadowing - if you look for a property, it will look at the object,
+then the prototype, then the prototype of that, till it gets to null. The first
+of the property it finds it will show, which is why greet works.*/
+const personPrototype = {
+  greet() {
+    console.log("hello!");
+  },
+};
+
+const carl = Object.create(personPrototype);
+carl.greet(); // hello!
+
+/*
+function createPerson(name) {
+  const obj = {};
+  obj.name = name;
+  obj.introduceSelf = function () {
+    console.log(`Hi! I'm ${this.name}.`);
+  };
+  return obj;
+}
+||||||||| constructor version |||||||||
+function Person(name) {
+  this.name = name;
+  this.introduceSelf = function () {
+    console.log(`Hi! I'm ${this.name}.`);
+  };
+}
+
+to call, use new:
+const salva = new Person("Salva");
+salva.name;
+salva.introduceSelf();
+
+const frankie = new Person("Frankie");
+frankie.name;
+frankie.introduceSelf();*/
+
+/* access objects contents through dot notation. ex:
+person.age;
+person.bio();
+person.name.first
+
+bracket notation:
+person["age"];
+person["name"]["first"];
+function logProperty(propertyName) {
+  console.log(person[propertyName]);
+}
+logProperty("name");
+// ["Bob", "Smith"]
+logProperty("age");
+// 32 */
+
+/* can update values like this, even in js console:
+person.age = 45;
+person["name"]["last"] = "Cratchit";
+or add in new values:
+person["eyes"] = "hazel";
+person.farewell = function () {
+  console.log("Bye everybody!");
+};
+
+constructors = functions?*/
+
+    </script>
+</html>
