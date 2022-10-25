@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>JSON: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
+    let motherInfo = 'The mother cats are called ';
+    let kittenInfo;
+    const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json';
+
+    fetch(requestURL)
+    .then(response => response.text())
+    .then(text => displayCatInfo(text))
+
+    function displayCatInfo(catString) {
+      let total = 0;
+      let male = 0;
+
+      // Add your code here
+      JSON.parse(catString); /*converting json to object after making it text*/
+      for (const mother of mothers) {
+        const mom = catString[0]['name'];
+        para1.textContent = `${name}, `;}
+        motherInfo + para1.textContent
+        const kittens = cats.kittens;
+        for (const kitten of kittens) {
+            motherInfo
+      kittenInfo
+
+      mother.textContent = mother.textContent.slice(0,mother.textContent.length-2) + '.';
+
+
+      /*fill in the missing parts of the displayCatInfo()function to store:
+
+The names of the three mother cats, separated by commas, in the motherInfo variable.
+The total number of kittens, and how many are male and female, in the kittenInfo variable.
+The values of these variables are then printed to the screen inside paragraphs.
+
+Some hints/questions:
+
+The JSON data is provided as text inside the displayCatInfo() function. You'll need to parse it into JSON before you can get any data out of it.
+You'll probably want to use an outer loop to loop through the cats and add their names to the motherInfo variable string, and an inner loop to loop through all the kittens, add up the total of all/male/female kittens, and add those details to the kittenInfo variable string.
+The last mother cat name should have an "and" before it, and a full stop after it. How do you make sure this can work, no matter how many cats are in the JSON?
+Why are the para1.textContent = motherInfo; and para2.textContent = kittenInfo; lines inside the displayCatInfo() function, and not at the end of the script? This has something to do with async code.*/
+
+      // Don't edit the code below here!
+
+      para1.textContent = motherInfo;
+      para2.textContent = kittenInfo;
+    }
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</html>
