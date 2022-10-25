@@ -43,20 +43,16 @@
       let male = 0;
 
       // Add your code here
-      JSON.parse(text); /*converting json to object after making it text*/
-      const mothers = catString.members;
+    /*  JSON.parse(text); /*converting json to object after making it text*/
+     /* const mothers = catString.members;
       for (const mother of mothers) {
         motherInfo += `${mother.name}, `;
         const kittens = [0]
         for (const kitten of kittens) {
 
       }
-        /*for (const kitten of kittens) {
-            motherInfo
-            const kittens = cats.kittens;
-      kittenInfo*/
-
-      mother.textContent = mother.textContent.slice(0,mother.textContent.length-2) + '.';
+    }
+mother.textContent = mother.textContent.slice(0,mother.textContent.length-2) + '.';*/
 
       
       
@@ -75,7 +71,48 @@ You'll probably want to use an outer loop to loop through the cats and add their
 The last mother cat name should have an "and" before it, and a full stop after it. How do you make sure this can work, no matter how many cats are in the JSON?
 Why are the para1.textContent = motherInfo; and para2.textContent = kittenInfo; lines inside the displayCatInfo() function, and not at the end of the script? This has something to do with async code.*/
 
-      // Don't edit the code below here!
+   
+
+   // an answer i found online and is not mine but I'm saving it as a reference
+//catString = JSON.parse(catString); /* const cats = JSON.parse(catString); didn't work */
+      
+       /* for(let x = 0; x < catString.length; x++) {
+            motherInfo = motherInfo + catString[x].name + ", ";
+
+        for(let z = 0; z < catString[x].kittens.length; z++) {
+            total++;
+            if(catString[x].kittens[z].gender === "m") {
+                male++;
+            }
+            }
+        }
+        kittenInfo = `There are a total of ${total} kittens. Of the kittens, ${male} are male and ${total - male} are female kittens.`
+        motherInfo = motherInfo.slice(0, (motherInfo.length - (catString[catString.length - 1].name.length + 2)));
+
+        motherInfo = motherInfo.concat("", `and ${catString[catString.length - 1].name}.`);*/
+
+
+        // class code
+
+        const cats = JSON.parse(catString);
+        for (let i = 0; i < cats.length; i++) {
+          for (const kitten of cats[i].kittens) { //adding amount of total and males
+            total++;
+            if (kitten.gender === 'm') {
+              male++;
+            }
+          }
+
+          if (i < (cats.length - 1)) { //adding moms name to a string
+            motherInfo += `${cats[i].name},`;
+          }else{
+            motherInfo += `and ${cats[i].name}.`;
+          }
+          }
+        
+
+        kittenInfo = `There are ${total} kittens in total, ${male} males and ${total - male} females.`;
+   // Don't edit the code below here!
 
       para1.textContent = motherInfo;
       para2.textContent = kittenInfo;
