@@ -43,8 +43,8 @@
       let male = 0;
 
       // Add your code here
-    /*  JSON.parse(text); /*converting json to object after making it text*/
-     /* const mothers = catString.members;
+    JSON.parse(text); /*converting json to object after making it text*/
+     const mothers = catString.members;
       for (const mother of mothers) {
         motherInfo += `${mother.name}, `;
         const kittens = [0]
@@ -52,7 +52,7 @@
 
       }
     }
-mother.textContent = mother.textContent.slice(0,mother.textContent.length-2) + '.';*/
+mother.textContent = mother.textContent.slice(0,mother.textContent.length-2) + '.';
 
       
       
@@ -94,7 +94,7 @@ Why are the para1.textContent = motherInfo; and para2.textContent = kittenInfo; 
 
         // class code
 
-        const cats = JSON.parse(catString);
+       /* const cats = JSON.parse(catString);
         for (let i = 0; i < cats.length; i++) {
           for (const kitten of cats[i].kittens) { //adding amount of total and males
             total++;
@@ -111,7 +111,7 @@ Why are the para1.textContent = motherInfo; and para2.textContent = kittenInfo; 
           }
         
 
-        kittenInfo = `There are ${total} kittens in total, ${male} males and ${total - male} females.`;
+        kittenInfo = `There are ${total} kittens in total, ${male} males and ${total - male} females.`;*/
    // Don't edit the code below here!
 
       para1.textContent = motherInfo;
