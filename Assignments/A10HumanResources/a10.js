@@ -22,7 +22,7 @@ let jsonEmployees= [
         }]
 
 let jsonString = JSON.stringify(jsonEmployees);
-let employeeString = "The employee JSON = "
+let employeeString = "Problem 1: The employee JSON = "
 console.log(employeeString + jsonString);
 
 
@@ -35,7 +35,7 @@ let jsonText = {
 
 
 jsonString = JSON.stringify(jsonText);
-let companyString = "The company JSON = "
+let companyString = "Problem 2: The company JSON = "
 console.log(companyString + jsonString);
 
 jsonEmployees.push ({
@@ -46,7 +46,7 @@ jsonEmployees.push ({
     raiseEligible : false
 });
 
-let addString = "Anna added to the JSON = "
+let addString = "Problem 3: Anna added to the JSON = "
 jsonString = JSON.stringify(jsonText);
 console.log(addString + jsonString);
 
@@ -56,17 +56,34 @@ for(let z = 0; z < jsonEmployees.length; z++) {
     totalSalary = totalSalary + jsonEmployees[z].salary;
   };
 
-let salaryString = "The total salary of the employees is $"
+let salaryString = "Problem 4: The total salary of the employees is $"
 console.log(salaryString + totalSalary +".");
 
 
 for(let z = 0; z < jsonEmployees.length; z++) {
 if (jsonEmployees[z].raiseEligible === true) {
-    let newSalary = (jsonEmployees[z].salary * 0.10) + jsonEmployees[z].salary;
-    jsonEmployees.raiseEligible = false;
+    jsonEmployees[z].salary = (jsonEmployees[z].salary * 0.10) + jsonEmployees[z].salary;
+    jsonEmployees[z].raiseEligible = false;
 };
 }
-console.log(newSalary);
+
+let raiseString = "Problem 5: Sam and Mary got a 10% raise and now are not raise eligible = "
+jsonString = JSON.stringify(jsonText);
+console.log(raiseString + jsonString);
+
+
+jsonEmployees.forEach(element =>
+    element.wfh = false
+  );
+for(let z = 0; z < jsonEmployees.length; z++) {
+    if (jsonEmployees[z].firstName === "Anna" || jsonEmployees[z].firstName === "Sam") {
+        jsonEmployees[z].wfh = true;
+    };
+    }
+
+let wfhString = "Problem 6: Anna and Sam like to work from home = "
+jsonString = JSON.stringify(jsonText);
+console.log(wfhString + jsonString);
 
 /*
     It's raise time. If an employee is raise eligible, increase their salary by 10%. 
