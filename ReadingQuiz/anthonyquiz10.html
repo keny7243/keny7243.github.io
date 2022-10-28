@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>JSON: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="../styles.css" /> --> <!-- This line is commented out because we don't need it -->
+  </head>
+
+  <body>
+    <section class="preview">
+
+    </section>
+  </body>
+  <script>
+
+const section = document.querySelector('section'); // This grabs the section element from our body element (above)
+
+let para1 = document.createElement('p'); // These two lines create variables that creates two p elements
+let para2 = document.createElement('p'); // These p elements are going to hold the output of our function below
+let motherInfo = 'The mother cats are called '; // A string that we'll append to later
+let kittenInfo; // A empty variable that we'll append to later
+const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json';
+// The line above links to the JSON of cats and their kittens. You could copy+paste this into a browser and you would see the JSON.
+
+fetch(requestURL) // this fetches the URL; .then takes the response of fetch and does something with it (twice over)
+.then(response => response.text())
+.then(text => displayCatInfo(text))
+
+function displayCatInfo(catString) { // a function declaration; this one will take one parameter
+  let total = 0; // this will keep track of the total number of kittens
+  let male = 0; // this will keep track of the total number of make kittens
+
+  // We don't keep track of female kittens because we'll be able to subtract male from total to get female kittens
+
+  const cats = JSON.parse(catString); // we take the parameter that we feed in and parse it (we know it comes in as JSON)
+
+  for (let i = 0; i < cats.length; i++) { // this loops through the mother cats (we have 3 total mother cats)
+    for (const kitten of cats[i].kittens) { // this loops through each mother cat's kittens
+      total++; // adds 1 to total for each kitten
+      if (kitten.gender === 'm') { // if the kitten's gender is male...
+        male++; // ...adds 1 to male
+      }
+    }
+
+    if (i < (cats.length - 1)) { // we are on any mother cat that ISN'T the LAST of the mother cats
+      motherInfo += `${ cats[i].name }, `; // add that cat's name to motherInfo, with a comma and space after
+    } else { // else, if we are on the last cat of the mother cats
+      motherInfo += `and ${ cats[i].name }.`; // add that cat's name to motherInfo, with a period.
+    }
+  }
+
+  kittenInfo  = `There are ${ total } kittens in total, ${ male } males and ${ total - male } females.`;
+  // Adding a string to kittenInfo that adds in the total number of kittens, the total number of male kittens, and does the math to get us the total number of female kittens 
+
+
+  para1.textContent = motherInfo; // adds content to the paragraph elements we made earlier
+  para2.textContent = kittenInfo;
+}
+
+section.appendChild(para1); // appends those two paragraph elements to the section element, making them appear
+section.appendChild(para2);
+  </script>
+
+</html>
