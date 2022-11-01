@@ -62,7 +62,7 @@ let salaryString = "Problem 4: The total salary of the employees is..."
 console.log(salaryString);
 console.log(totalSalary);
 
-
+//could also be written: jsonText.employees[z][salary]
 for(let z = 0; z < jsonEmployees.length; z++) {
 if (jsonEmployees[z].raiseEligible === true) {
     jsonEmployees[z].salary = (jsonEmployees[z].salary * 0.10) + jsonEmployees[z].salary;
