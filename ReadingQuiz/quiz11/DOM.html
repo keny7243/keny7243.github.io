@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents-->
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .highlight {
+          color: white;
+          background-color: black;
+          padding: 10px;
+          width: 250px;
+          text-align: center;
+        }
+      </style>      
+    <title>Simple DOM example</title>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+      <script>
+        const link = document.querySelector('a'); //manipulating a by storing a reference to it in a variable first
+        link.textContent = 'Mozilla Developer Network'; //changing the text in the link
+        link.href = 'https://developer.mozilla.org'; //changing the URL
+        const sect = document.querySelector('section');// manipulating section by storing a reference to it in a variable first
+        const para = document.createElement('p'); //creating a new paragraph
+para.textContent = 'We hope you enjoyed the ride.'; //creating the text of the paragraph
+sect.appendChild(para); //append paragraph to section
+const text = document.createTextNode(' — the premier source for web development knowledge.'); //create a text node
+const linkPara = document.querySelector('p');
+linkPara.appendChild(text); //add node to dom through paragraph
+sect.appendChild(linkPara); //move p with link node to bottom of section
+//sect.removeChild(linkPara); //remove node; can also do it like this linkPara.remove();
+//for older browsers linkPara.parentNode.removeChild(linkPara);
+/*css styling through javascript (|camelcase instead of hyphenated|)
+para.style.color = 'white';
+para.style.backgroundColor = 'black';
+para.style.padding = '10px';
+para.style.width = '250px';
+para.style.textAlign = 'center';*/
+para.setAttribute('class', 'highlight'); //the attribute you want to set on the element, and the value you want to set it to.
+   </script>
+  </body>
+</html>
