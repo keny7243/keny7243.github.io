@@ -75,12 +75,12 @@ console.log(raiseString);
 console.log(jsonText);
 
 
-jsonEmployees.forEach(element =>
-    element.wfh = false
+jsonEmployees.forEach(element => //for each element in the jsonEmployees array
+    element.wfh = false //make them have a property called wfh, and make that property false
   );
-for(let z = 0; z < jsonEmployees.length; z++) {
-    if (jsonEmployees[z].firstName === "Anna" || jsonEmployees[z].firstName === "Sam") {
-        jsonEmployees[z].wfh = true;
+for(let z = 0; z < jsonEmployees.length; z++) { //loop like the other ones
+    if (jsonEmployees[z].firstName === "Anna" || jsonEmployees[z].firstName === "Sam") { //if the first name is Anna or Sam
+        jsonEmployees[z].wfh = true;//make their wfh property true
     };
     }
 
