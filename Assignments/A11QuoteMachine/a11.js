@@ -31,7 +31,7 @@ image.src = x; //changes image source to image url in api
 
 function imageAlt (x) {
     image.alt = `Picture of ` + x; //makes alt say "Picture of name"
-    console.log(image.alt);
+    console.log(image.alt); 
 }
 
 function displayName(x) {
