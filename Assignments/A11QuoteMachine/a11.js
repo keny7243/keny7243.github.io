@@ -1,29 +1,35 @@
-const quoteButton = document.querySelector('.new-quote'); //adds reference to new quote button thru its class
-quoteButton.addEventListener('click', getQuote); //if clicked, run the getQuote function
+const quoteButton = document.querySelector('.button'); //adds reference to the class button
+quoteButton.addEventListener('click', getUser); //if clicked, run the getUser function
 
-const endpoint = 'https://randomuser.me/api/' //api that generates a quote and its attributes
+const endpoint = 'https://randomuser.me/api/' //api that generates a random user and their attributes
 
-async function getQuote() { //defining getQuote function
-   // console.log('test click worked'); //show text in console 
+const image = document.querySelector('img'); //adds reference to the img element
+
+async function getUser() { //defining getUser function
     let text = await fetch(endpoint) //fetch api fetches endpoint (url)
     let response = await text.text();
     let jsonResponse = JSON.parse(response);
+
     console.log(jsonResponse);
     console.log(jsonResponse['results'][0]['name']['first']);
     console.log(jsonResponse['results'][0]['login']['username']);
     console.log(jsonResponse['results'][0]['picture']['large']);
     console.log(jsonResponse['results'][0]['dob']['age']);
-    const image = document.querySelector('img');
-    image.src = jsonResponse['results'][0]['picture']['large'];
-    image.alt = `Picture of ${jsonResponse['results'][0]['login']['username']}`;
-    //document.getElementById('js-picture-img').appendChild(img);
-    displayQuote(jsonResponse['results'][0]['name']['first'] + ' ' + jsonResponse['results'][0]['name']['last']);
+    console.log(typeof jsonResponse['results'][0]['dob']['age'].toString()); //turning number to string (for textContent)
+
+    displayImage(jsonResponse['results'][0]['picture']['large']);
+    displayName(jsonResponse['results'][0]['name']['first'] + ' ' + jsonResponse['results'][0]['name']['last']);
     displayUsername(jsonResponse['results'][0]['login']['username']);
-    console.log(typeof jsonResponse['results'][0]['dob']['age'].toString());
     displayAge(jsonResponse['results'][0]['dob']['age'].toString());
 }
 
-function displayQuote(x) {
+/*https://www.youtube.com/watch?v=pjm1jKPSGck - shows how I created the image*/
+function displayImage (x) { //DON'T USE append.child - causes images to accumulate
+image.src = x; //changes image source to image url in api
+image.alt = `Picture of ${jsonResponse['results'][0]['name']['first']}`; //makes alt say "Picture of first name"
+}
+
+function displayName(x) {
   document.getElementById('js-quote-text').textContent = "Name: " + x;
 }
 
@@ -35,7 +41,8 @@ function displayAge(x) {
     console.log(x);
     document.getElementById('js-age-text').textContent = "Age: " + x;
     //tried x.toString(), string concatenation, `${x}`, String(x), putting it in a different variable
+    //turns out it was just that VSCode was acting up
 }
 
-getQuote();
+getUser(); //running getUser once when page loads
 //can also do window.addEventListener('load', getQuote);
