@@ -19,18 +19,23 @@ async function getUser() { //defining getUser function
 
     displayImage(jsonResponse['results'][0]['picture']['large']);
     displayName(jsonResponse['results'][0]['name']['first'] + ' ' + jsonResponse['results'][0]['name']['last']);
+    imageAlt(jsonResponse['results'][0]['name']['first'] + ' ' + jsonResponse['results'][0]['name']['last']);
     displayUsername(jsonResponse['results'][0]['login']['username']);
     displayAge(jsonResponse['results'][0]['dob']['age'].toString());
 }
 
 /*https://www.youtube.com/watch?v=pjm1jKPSGck - shows how I created the image*/
 function displayImage (x) { //DON'T USE append.child - causes images to accumulate
-image.src = x; //changes image source to image url in api
-image.alt = `Picture of ${jsonResponse['results'][0]['name']['first']}`; //makes alt say "Picture of first name"
+image.src = x; //changes image source to image url in api 
+}
+
+function imageAlt (x) {
+    image.alt = `Picture of ` + x; //makes alt say "Picture of name"
+    console.log(image.alt);
 }
 
 function displayName(x) {
-  document.getElementById('js-quote-text').textContent = "Name: " + x;
+  document.getElementById('js-name-text').textContent = "Name: " + x;
 }
 
 function displayUsername(x) {
@@ -38,7 +43,6 @@ function displayUsername(x) {
 }
 
 function displayAge(x) {
-    console.log(x);
     document.getElementById('js-age-text').textContent = "Age: " + x;
     //tried x.toString(), string concatenation, `${x}`, String(x), putting it in a different variable
     //turns out it was just that VSCode was acting up
