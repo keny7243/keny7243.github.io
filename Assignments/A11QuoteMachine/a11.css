@@ -15,6 +15,13 @@ html {
     font-style: normal;
     background-color: #0A152F;
   }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #F3B167;
+  }
   
   .app {
     position: absolute;
@@ -96,6 +103,21 @@ html {
     background-color: #cccccc;
     color: #666666;
     cursor: not-allowed;
+  }
+
+  .wholething {
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  .explanation {
+    position: absolute;
+    top:85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
   }
   
   @media screen and (max-width: 600px) {
