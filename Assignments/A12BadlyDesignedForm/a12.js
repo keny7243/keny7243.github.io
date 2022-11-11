@@ -3,6 +3,7 @@ const correctButton = document.querySelector('.correct-button')
 const billingButton = document.querySelector('.billing-button').addEventListener('click', unlock);
 const requiredBillInputs = document.querySelector('.billreq')
 const billForm = document.querySelector('.bill-form')
+const spinner = document.getElementById('circle')
 
 spinButton.addEventListener('click', spin);
 correctButton.addEventListener('click', correct);
@@ -32,11 +33,20 @@ function spin() {
     //make the circle spin
     //record the number that the circle lands on
     //add money owed to lostMoney
+    rotateFunction();
     console.log(lostMoneyInt);
     lostMoneyInt = lostMoneyInt + 10;
     lostMoney.textContent = lostMoneyInt;
 
 }
+
+function rotateFunction(){
+    var min = 1024;
+    var max = 9999;
+    var deg = Math.floor(Math.random() * (max - min)) + min;
+    spinner.style.transform = "rotate("+deg+"deg)";
+  }
+  
 
 function correct() {
     console.log(gainedMoneyInt);

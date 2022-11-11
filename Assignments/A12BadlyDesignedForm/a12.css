@@ -1,16 +1,26 @@
 *{
     box-sizing: border-box; /*padding is part of the width of the box*/
-    font-family: Ubuntu;
+    font-family: 'Ubuntu';
 }
 .topform {
     padding: 20px;
     background-color: orange;
     border-radius: 5px;
     border: 1px solid red;
-    max-width: 350px;
+    max-width: 400px;
+}
+
+em {
+    font-style: italic;
 }
 
 /*https://www.youtube.com/watch?v=Ki0XXrlKlHY*/
+
+#mainbox{
+    width:350px;
+    height: 300px;
+}
+
 .circle {
     width: 300px;
     height: 300px;
@@ -19,7 +29,20 @@
     position: relative;
 }
 
+#circle2 {
+    position:absolute;
+    background-color:white;
+    width:250px;
+    height: 250px;
+    text-align:center;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
 .circle .number {
+    font-size:18px;
     --rotation: 0; /*default value*/
     position: absolute;
     width: 100%;
@@ -28,6 +51,49 @@
     transform: rotate(var(--rotation));  /*created a variable called rotation*/
 }
 
-.clock .number2 {
-    --rotation: 30deg;
+#number1 {--rotation: 36deg;}
+#number2 {--rotation: 72deg;}
+#number3 {--rotation: 108deg;}
+#number4 {--rotation: 144deg;}
+#number5 {--rotation: 180deg;}
+#number6 {--rotation: 216deg;}
+#number7 {--rotation: 252deg;}
+#number8 {--rotation: 288deg;}
+#number9 {--rotation: 324deg;}
+#separate1 {--rotation: 18deg;}
+#separate2 {--rotation: 54deg;}
+#separate3 {--rotation: 90deg;}
+#separate4 {--rotation: 126deg;}
+#separate5 {--rotation: 162deg;}
+#separate6 {--rotation: 198deg;}
+#separate7 {--rotation: 234deg;}
+#separate8 {--rotation: 270deg;}
+#separate9 {--rotation: 306deg;}
+#separate10 {--rotation: 342deg;}
+
+
+#hand {
+    --rotation: 0;
+    position: absolute;
+    width: 10px;
+    height:10%;
+    top: -10%;
+    left: 50%;
+    text-align: center;
+    background-color: rgb(255, 0, 255, 0.7);
+    z-index:10;
+    transform-origin: bottom; /*the rotation occurs at the bottom*/
+    transform: translateX(-50%) rotate(calc(var(--rotation)* 1deg)); /*moves the position left by half of its width*/
+}
+
+.spin-button {
+    position: absolute;
+    background-color: red;
+    bottom:50%;
+    left: 50%;
+    z-index:20;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(50%);
 }

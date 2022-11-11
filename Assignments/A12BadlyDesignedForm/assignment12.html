@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="a12.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <script defer src="a12.js"></script>
     <title>A Badly Designed Form</title>
 </head>
@@ -32,21 +33,35 @@
     <h1>Phone Number Gambling</h1>
     <div>
         <p>Please enter your phone number. Each missed spin will cost $10 and each win will bring $15.</p>
+        <p><em>Note: We will call you for verification.</em></p>
         <p class="output">___-___-____</p>
     </div>
-    <div id="mainbox" class="mainbox">
+    <div id="mainbox">
+        <div class="hand" id="hand"></div>
         <div id="circle" class="circle">
-            <div class="number number1">1</div>
-            <div class="number number2">2</div>
-            <div class="number number3">3</div>
-            <div class="number number4">4</div>
-            <div class="number number5">5</div>
-            <div class="number number6">6</div>
-            <div class="number number7">7</div>
-            <div class="number number8">8</div>
-            <div class="number number9">9</div>
+            <div id="circle2"></div>
+            <div class="number" id="number0">0</div>
+            <div class="number" id="separate1">|</div>
+            <div class="number" id="number1">1</div>
+            <div class="number" id="separate2">|</div>
+            <div class="number" id="number2">2</div>
+            <div class="number" id="separate3">|</div>
+            <div class="number" id="number3">3</div>
+            <div class="number" id="separate4">|</div>
+            <div class="number" id="number4">4</div>
+            <div class="number" id="separate5">|</div>
+            <div class="number" id="number5">5</div>
+            <div class="number" id="separate6">|</div>
+            <div class="number" id="number6">6</div>
+            <div class="number" id="separate7">|</div>
+            <div class="number" id="number7">7</div>
+            <div class="number" id="separate8">|</div>
+            <div class="number" id="number8">8</div>
+            <div class="number" id="separate9">|</div>
+            <div class="number" id="number9">9</div>
+            <div class="number" id="separate10">|</div>
+            <input class="spin-button" type="button" name="spin-button" value="Spin" disabled>
         </div>
-        <input class="spin-button" type="button" name="spin-button" value="Cash in and Spin" disabled>
     </div>
         <form>
             <input class="correct-button" type="button" name="correct-button" value="Right Number" disabled>
