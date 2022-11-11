@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="a12.css">
+    <script defer src="a12.js"></script>
+    <title>A Badly Designed Form</title>
+</head>
+<body>
+    <div class="topform">
+    <h2>Billing Information</h2>
+    <form class="bill-form">
+        First Name: <input type="text" name="first-name" class="billreq" required> <br>
+        Last Name: <input type="text" name="last-name" class="billreq" required> <br>
+        Email Address: <input type="text" name="email" class="billreq" required><br>
+        Address Line 1: <input type="text" name="name" class="billreq" required><br>
+        Address Line 2: <input type="text" name="name"><br>
+        City: <input type="text" name="name" class="billreq" required><br>
+        State: <input type="text" name="name" class="billreq" required><br>
+        Zip Code: <input type="text" name="name" class="billreq" required><br>
+        Country: <input type="text" name="name" class="billreq" required><br>
+        Card Type: <input type="text" name="name" class="billreq" required><br>
+        Card Number: <input type="text" name="name" class="billreq" required><br>
+        Expiration Month: <input type="text" name="name" class="billreq" required><br>
+        Expiration Year: <input type="text" name="name" class="billreq" required><br>
+        CVC: <input type="text" name="name" class="billreq" required><br>
+        <input class="billing-button" type="submit">
+      </form>
+    </div>
+    <h1>Phone Number Gambling</h1>
+    <div>
+        <p>Please enter your phone number. Each missed spin will cost $10 and each win will bring $15.</p>
+        <p class="output">___-___-____</p>
+    </div>
+    <form>
+    <input class="spin-button" type="button" name="spin-button" value="Cash in and Spin" disabled>
+    <input class="correct-button" type="button" name="correct-button" value="Right Number" disabled>
+    </form>
+    <canvas></canvas>
+    <div>
+        <p>You owe us this much: </p>
+        <p class ="lost-money">0</p>
+        <p>You won this much: </p>
+        <p class ="gained-money">0</p>
+    </div>
+
+    <p>Kerstin Nyquist</p>
+    </body>
+</html>

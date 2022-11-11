@@ -1,6 +1,7 @@
-.billform {
+.topform {
     padding: 20px;
-    color: orange;
+    background-color: orange;
     border-radius: 5px;
     border: 1px solid red;
+    max-width: 350px;
 }
