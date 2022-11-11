@@ -43,3 +43,7 @@ function correct() {
     gainedMoneyInt = gainedMoneyInt + 15;
     gainedMoney.textContent = gainedMoneyInt;
 }
+
+
+////////////////////////
+
