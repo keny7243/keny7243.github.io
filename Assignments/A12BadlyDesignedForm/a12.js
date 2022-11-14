@@ -42,7 +42,7 @@ function spin() {
     lostMoney.textContent = lostMoneyInt;
 }
 
-let number = 0;
+let number;
 function rotateFunction(){
     resetSpinner;
     console.log(resetSpinner);
