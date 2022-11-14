@@ -38,7 +38,7 @@ function spin() {
     //record the number that the circle lands on
     //add money owed to lostMoney
     rotateFunction();
-    lostMoneyInt = lostMoneyInt + 10;
+    lostMoneyInt = lostMoneyInt + 1;
     lostMoney.textContent = lostMoneyInt;
 }
 
@@ -84,7 +84,7 @@ function resetSpinner(){
 function correct() {
     console.log(num);
     phoneNumber.textContent = phoneNumber.textContent + num;
-    gainedMoneyInt = gainedMoneyInt + 15;
+    gainedMoneyInt = gainedMoneyInt + 10;
     gainedMoney.textContent = gainedMoneyInt;
     console.log(gainedMoneyInt);
     numberOfCorrectClicks++;
