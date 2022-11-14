@@ -45,7 +45,7 @@ function spin() {
 
 let number;
 function rotateFunction(){
-  
+    
     resetSpinner;
     console.log(resetSpinner);
     var min = 0;
@@ -55,27 +55,27 @@ function rotateFunction(){
     var degForNumber = -deg;
     console.log(deg);
     console.log(degForNumber);
-    
+   
     if ((342 <= degForNumber <=360) || (0 <= degForNumber <18)){
-        number = 0;
+        return number = 0;
     } else if (18 <= degForNumber <54) {
-        number = 1;
+        return number = 1;
     } else if (54 <= degForNumber <90){
-        number = 2;
+        return number = 2;
     } else if (90 <= degForNumber <126){
-        number = 3;
+        return number = 3;
     } else if (126 <= degForNumber <162){
-        number = 4;
+        return number = 4;
     } else if (162 <= degForNumber <198){
-        number = 5;
+        return number = 5;
     } else if (198 <= degForNumber <234){
-        number = 6;
+        return number = 6;
     } else if (234 <= degForNumber <270){
-        number = 7;
+        return number = 7;
     } else if (270 <= degForNumber <306){
-        number = 8;
+        return number = 8;
     } else if (306 <= degForNumber <342){
-        number = 9;
+        return number = 9;
     }
     console.log(number);
   }
