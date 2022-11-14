@@ -38,7 +38,7 @@ function spin() {
     //record the number that the circle lands on
     //add money owed to lostMoney
     rotateFunction();
-    lostMoneyInt = lostMoneyInt + 1.5;
+    lostMoneyInt = lostMoneyInt + 1.50;
     lostMoney.textContent = lostMoneyInt;
 }
 
