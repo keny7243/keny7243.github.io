@@ -30,16 +30,11 @@ em {
     position: relative;
 }
 
-#circle2 {
-    position:absolute;
-    background-color:white;
-    width:250px;
-    height: 250px;
-    text-align:center;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+#spinner {
+    transition: all ease 5s;
+}
+.correct-button {
+    margin-top: 20px;
 }
 
 .circle .number {
@@ -73,17 +68,16 @@ em {
 #separate10 {--rotation: 342deg;}
 
 
-#hand {
+#arrow {
     --rotation: 0;
     position: absolute;
-    width: 10%;
-    height:1%;
-    top: 50%;
-    right: 0%;
+    width: 1%;
+    height:7%;
+    top: -5%;
+    left: 43%;
     background-color: rgb(255, 0, 255, 0.7);
     z-index:60;
-    transform-origin: bottom; /*the rotation occurs at the bottom*/
-    transform: translateX(-50%) rotate(calc(var(--rotation)* 1deg)); /*moves the position left by half of its width*/
+    transform: translateX(-50%); /*moves the position left by half of its width*/
 }
 
 .spin-button {
