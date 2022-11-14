@@ -78,11 +78,13 @@ em {
 #arrow {
     --rotation: 0;
     position: absolute;
-    width: 1%;
-    height:7%;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black;
     top: -5%;
     left: 43%;
-    background-color: rgb(255, 0, 255, 0.7);
     z-index:60;
     transform: translateX(-50%); /*moves the position left by half of its width*/
 }
