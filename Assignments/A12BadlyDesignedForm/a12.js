@@ -42,7 +42,7 @@ function spin() {
     lostMoney.textContent = lostMoneyInt;
 }
 
-let number;
+let num = 0;
 function rotateFunction(){
     resetSpinner;
     console.log(resetSpinner);
@@ -53,28 +53,28 @@ function rotateFunction(){
     var degForNumber = -deg;
     console.log(deg);
     console.log(degForNumber);
-    if ((342 <= degForNumber <=360) || (0 <= degForNumber <18)){
-        number = 0;
-    } else if (18 <= degForNumber <54) {
-         number = 1;
-    } else if (54 <= degForNumber <90){
-        number = 2;
-    } else if (90 <= degForNumber <126){
-        number = 3;
-    } else if (126 <= degForNumber <162){
-        number = 4;
-    } else if (162 <= degForNumber <198){
-        number = 5;
-    } else if (198 <= degForNumber <234){
-        number = 6;
-    } else if (234 <= degForNumber <270){
-        number = 7;
-    } else if (270 <= degForNumber <306){
-        number = 8;
-    } else if (306 <= degForNumber <342){
-        number = 9;
+    if ((342 <= degForNumber && degForNumber <=360) || (0 <= degForNumber && degForNumber <18)){
+        num = 0;
+    } else if (18 <= degForNumber && degForNumber <54) {
+        num = 1;
+    } else if (54 <= degForNumber && degForNumber <90){
+        num = 2;
+    } else if (90 <= degForNumber && degForNumber <126){
+        num = 3;
+    } else if (126 <= degForNumber && degForNumber <162){
+        num = 4;
+    } else if (162 <= degForNumber && degForNumber <198){
+        num = 5;
+    } else if (198 <= degForNumber && degForNumber <234){
+        num = 6;
+    } else if (234 <= degForNumber && degForNumber <270){
+        num = 7;
+    } else if (270 <= degForNumber && degForNumber <306){
+        num = 8;
+    } else if (306 <= degForNumber && degForNumber <342){
+        num = 9;
     }
-    console.log(number);
+    console.log(num);
   }
 
 function resetSpinner(){
@@ -82,14 +82,15 @@ function resetSpinner(){
 }
 
 function correct() {
-    console.log(number);
-    phoneNumber.textContent = phoneNumber.textContent + number;
+    console.log(num);
+    phoneNumber.textContent = phoneNumber.textContent + num;
     gainedMoneyInt = gainedMoneyInt + 15;
     gainedMoney.textContent = gainedMoneyInt;
     console.log(gainedMoneyInt);
     numberOfCorrectClicks++;
     if (numberOfCorrectClicks > 9) {
         correctButton.setAttribute('disabled', '');
+        spinButton.setAttribute('disabled', '');
     };
 }
 
