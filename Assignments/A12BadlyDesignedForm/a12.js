@@ -46,6 +46,7 @@ let num = 0;
 function rotateFunction(){
     resetSpinner;
     console.log(resetSpinner);
+    /*https://workshops.hackclub.com/spinning_wheel/ random math equation, min and max values changed*/
     var min = 0;
     var max = -360;
     var deg = Math.floor(Math.random() * (max - min)) + min;
@@ -53,6 +54,8 @@ function rotateFunction(){
     var degForNumber = -deg;
     console.log(deg);
     console.log(degForNumber);
+    /*https://stackoverflow.com/questions/6454198/check-if-a-value-is-within-a-range-of-numbers js needs range to have && inbetween*/
+    /*Thanks Jack*/
     if ((342 <= degForNumber && degForNumber <=360) || (0 <= degForNumber && degForNumber <18)){
         num = 0;
     } else if (18 <= degForNumber && degForNumber <54) {

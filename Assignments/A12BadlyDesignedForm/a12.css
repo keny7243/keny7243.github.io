@@ -1,3 +1,4 @@
+/*https://workshops.hackclub.com/spinning_wheel/ helped a lot with styling*/
 *{
     box-sizing: border-box; /*padding is part of the width of the box*/
     font-family: 'Ubuntu';
@@ -40,7 +41,7 @@ em {
 }
 
 #spinner {
-    transition: all ease 3s;
+    transition: all ease 3s; /*https://www.youtube.com/watch?v=BwaonzIVsJU&t=1416s*/
 }
 
 
@@ -74,7 +75,7 @@ em {
 #separate9 {--rotation: 306deg;}
 #separate10 {--rotation: 342deg;}
 
-
+/*https://css-tricks.com/snippets/css/css-triangle/*/
 #arrow {
     --rotation: 0;
     position: absolute;
