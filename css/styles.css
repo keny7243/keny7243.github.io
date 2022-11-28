@@ -311,9 +311,10 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
     }
     /*|Secondary|*/
     .gsetup {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 420px 420px 420px;
+        grid-template-rows: 420px 420px;
         width: 100%;
+        gap: 2px;
     }
     .gimg {
         width: 420px;
