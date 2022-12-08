@@ -1,0 +1,38 @@
+<!-- https://www.youtube.com/watch?v=-RQWC4I2I1s&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=5 ----- making a face (D3.js) tutorial -->
+<!-- https://www.youtube.com/watch?v=Qw6uAg3EO64&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=20 ------------ making a map tutorial-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Making a map with D3.js</title>
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/d3@7.7.0/dist/d3.min.js"></script> <!--introduces global variable called D3 (loads d3)-->
+    <script defer src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script> <!-- library that can be used to convert topojson 
+      (map data) to geojson (what d3 reads)-->
+    <script defer src="map.js"></script>
+</head>
+<body>
+  <nav>
+    <!-- https://www.youtube.com/watch?v=oLgtucwjVII&t=408s
+        how to add a hamburger bar, and the navbar in different states -->
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <a href="index.html" class="logo">
+        <img src="../img/NyquistLogo.png" alt="Logo">
+    </a>
+<ul id="navbarlinks">
+    <li><a href="plants.html">Plants</a></li>
+    <li><a href="animals.html">Animals</a></li>
+    <li><a href="forms.html">Forms</a></li>
+    <li><a href="https://kerstinnyquist.myportfolio.com/">Portfolio</a></li>
+  </ul>
+</nav>
+<h1>Animal Mascots of Continents</h1>
+<hr>
+  <svg class="wholething" width="960" height="500"></svg>
+</body>
+</html>
