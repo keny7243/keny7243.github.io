@@ -13,6 +13,10 @@ body {
     stroke-opacity: 0.8;
   }
 
+  .country:hover {
+    fill: #F36D35; /*from cheap tricks link*/
+  }
+
   .wholething {
     margin-top:40px;
   }
