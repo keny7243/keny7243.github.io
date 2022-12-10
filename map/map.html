@@ -1,19 +1,25 @@
-<!-- https://www.youtube.com/watch?v=-RQWC4I2I1s&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=5 ----- making a face (D3.js) tutorial -->
-<!-- https://www.youtube.com/watch?v=Qw6uAg3EO64&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=20 ------------ making a map tutorial-->
-<!-- https://www.youtube.com/watch?v=9ZB1EgaJnBU&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=23 ----------- adding interactive elements-->
-<!-- https://www.youtube.com/watch?v=OoZ0LWD9KUs&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=32 ---------- chloropleth map - adding data to countries-->
+<!-- https://www.youtube.com/watch?v=-RQWC4I2I1s&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=5 : making a face (D3.js) tutorial -->
+<!-- https://www.youtube.com/watch?v=Qw6uAg3EO64&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=20 : making a map tutorial-->
+<!-- https://www.youtube.com/watch?v=9ZB1EgaJnBU&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=23 : adding interactive elements-->
+<!-- https://www.youtube.com/watch?v=OoZ0LWD9KUs&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=32 : chloropleth map - adding data to countries-->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Making a map with D3.js</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kerstin Nyquist">
+    <meta name="description" content="Webpage Portfolio Development">
     <link rel="stylesheet" href="map.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/561f9c4dd1.js" crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/d3@7.7.0/dist/d3.min.js"></script> <!--introduces global variable called D3 (loads d3)-->
     <script defer src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script> <!-- library that can be used to convert topojson 
       (map data) to geojson (what d3 reads)-->
     <script defer src="map.js"></script>
+    <title>Making a map with D3.js</title>
 </head>
 <body>
   <nav>
@@ -38,10 +44,11 @@
 <h1>Country Info</h1>
 <hr>
 <div class="mappagegrid">
-  <!--<div id="container" class="svg-container">
-  </div>-->
+  <div id="container" class="svg-container">
+  
   <svg class="wholething" width="960" height="500"></svg>
-  <div class="information"></div>
+  </div>
+  <div class="information"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Flag_of_Kosovo.svg/1200px-Flag_of_Kosovo.svg.png" alt=""></div>
 </div>
 </body>
 </html>

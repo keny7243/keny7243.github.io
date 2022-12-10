@@ -17,7 +17,7 @@ body {
     fill: #F36D35; /*from cheap tricks link*/
   }
 
- /* .svg-container {
+ .svg-container {
     width: 768px;
     height: 400px;
     vertical-align: top;
@@ -27,7 +27,7 @@ body {
   .svg-content {
     top: 0;
     left: 0;
-}*/
+}
 
 .information {
   width: 400px;
@@ -40,3 +40,26 @@ body {
     grid-template-rows: 1fr;
   }
 
+  .tick text {
+    font-size: 0.8 em;
+    fill: #0A152F;
+    font-family: 'Ubuntu';
+  }
+  
+  .tick circle {
+    stroke: #0A152F;
+    stroke-opacity: 0.5;
+  }
+
+  @media only screen and (max-width:749px){
+    .svg-container {
+      width: 576px;
+      height: 300px;
+      vertical-align: top;
+      overflow: hidden;
+  }
+
+  .country:hover, .country:active {
+    fill: #F36D35;
+}
+}
