@@ -28,7 +28,7 @@ svg.call(d3.zoom().on('zoom', (e) => { //zoom when zoomed - had to put e so that
 
 //https://unpkg.com/world-atlas@1.1.4/world/110m.tsv
 const countryRows = {};
-d3.tsv('../countryData/110m.tsv')
+d3.tsv('../countryData/110-m.tsv')
     .then(data => 
         data.forEach(d => { //for each id from data, 
             countryRows[d.iso_n3] = d; //get the id's whole row of information
@@ -36,6 +36,9 @@ d3.tsv('../countryData/110m.tsv')
 
 //use d.name for country name
 //use d.iso_n3 for id
+
+//make a json using the same d numbers, adding image files and biodiversity index
+//then add to legend or text at the bottom
 
 d3.json('https://unpkg.com/world-atlas@1.1.4/world/110m.json') //load data of world polygons using d3.json -> returns promise
     .then (data => { //then (access data and create function that uses data as input)
