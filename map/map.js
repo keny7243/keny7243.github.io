@@ -10,8 +10,9 @@ const svg = d3.select('svg');//('div#container');
 const projection = d3.geoNaturalEarth1(); //instance of the map projection
 const pathGenerator = d3.geoPath().projection(projection); //instance of geopath with projection as method with projection variable
 
-
 const g = svg.append('g');
+const colorLegendG = svg.append('g')
+    .attr('transform', `translate(180,150)`);
 
 g.append('path') //appending to g
     .attr('class', 'sphere') //giving the path a class named sphere
@@ -21,10 +22,13 @@ svg.call(d3.zoom().on('zoom', (e) => { //zoom when zoomed - had to put e so that
     g.attr('transform', e.transform);
     }));
 
-/*function handleZoom(e) {
-    d3.select('g.chart')
-      .attr('transform', e.transform);
-  }*/
+ 
+  /* colorLegendG.call(colorLegend, {
+      colorScale,
+      circleRadius: 30,
+      spacing: 80,
+      textOffset: 40
+    });*/
 
 //https://unpkg.com/world-atlas@1.1.4/world/110m.tsv
 const countryRows = {};
@@ -33,6 +37,9 @@ d3.tsv('../countryData/110-m.tsv')
         data.forEach(d => { //for each id from data, 
             countryRows[d.iso_n3] = d; //get the id's whole row of information
         }));
+
+        const colorScale = d3.scaleOrdinal(d3.schemeYlOrBr[7]);//creating color scale
+        const colorValue = d => countryRows[d.id].economy;
 
 //use d.name for country name
 //use d.iso_n3 for id
@@ -45,6 +52,11 @@ d3.json('https://unpkg.com/world-atlas@1.1.4/world/110m.json') //load data of wo
         console.log(data);
         const countries = topojson.feature(data, data.objects.countries); //converts topojson into geojson?
         console.log(countries); //each feature is a country
+        
+        colorScale
+            .domain(countries.features.map(colorValue))
+            .domain(colorScale.domain().sort());
+        console.log(colorScale.domain());
 
         g.selectAll('path')//selectng all paths in g
             .data(countries.features)//data join for our paths of features
@@ -52,7 +64,8 @@ d3.json('https://unpkg.com/world-atlas@1.1.4/world/110m.json') //load data of wo
                 .attr('class', 'country')//giving this a class of country
                 .attr('d', pathGenerator)//set the d attribute of these paths based on the country
                 //d is a string containing a series of path commands that define the path to be drawn ----> https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d
-            .append('title') //can't just add attribute because this is child of svg
+                .attr('fill', d=> colorScale(colorValue(d)))//fill is based on income data
+                .append('title') //can't just add attribute because this is child of svg
                 .text(d => countryRows[d.id].name); //gets country name from tsv
     });
 

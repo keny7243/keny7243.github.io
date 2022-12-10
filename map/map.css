@@ -8,7 +8,7 @@ body {
   }
 
   .country {
-    fill:#F3B167; /*country colors*/
+    /* fill:#F3B167; country colors*/
     stroke: #FEE0C4; /* country outline color*/
     stroke-width: 1px; /* country outline width*/
   }
