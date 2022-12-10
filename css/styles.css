@@ -275,6 +275,7 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
     opacity: 0;
     width: 370px;
     padding: 5px;
+    margin: 33px;
 }
 
 /* "hover" for mobile: https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices */
@@ -391,6 +392,7 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
     .desc {
         top: 145px;
         width: 390px;
+        margin: 0px;
     }
 
     .gallery:hover .cimg:before {       
