@@ -254,15 +254,15 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
 .cimg:before{
     content:"";
     position: absolute;
-    height:450px;
-    width:450px;
+    height:380px;
+    width:380px;
     background: rgba(142,53,41,0.8);
     z-index:80;
     opacity:0;
 }
 
 .gimg {
-    width: 450px;
+    width: 380px;
 }
 
 .desc {
@@ -270,11 +270,12 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
     text-align: center;
     color: #FEE0C4;
     z-index:81;
-    top: 180px;
+    top: 120px;
     font-size: 18px;
     opacity: 0;
-    width: 440px;
+    width: 370px;
     padding: 5px;
+    margin: 33px;
 }
 
 /* "hover" for mobile: https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices */

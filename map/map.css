@@ -67,7 +67,7 @@ body {
       height: 300px;
       vertical-align: top;
       overflow: hidden;
-    margin-left: 20px;
+    margin-left: 5px;
 }
   .country:hover, .country:active {
     fill: #F36D35;

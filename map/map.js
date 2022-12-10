@@ -3,6 +3,7 @@ let svg = d3.select('svg')//('div#container');
     .append('svg') //selects all svg on page and assigns svg constant to them
     .classed("svg-content", true);
 
+//https://www.w3schools.com/howto/howto_js_media_queries.asp
 function myFunction(w) {
     if (w.matches) { // If media query matches
         svg
@@ -127,6 +128,7 @@ d3.json('https://unpkg.com/world-atlas@1.1.4/world/110m.json') //load data of wo
                 .attr('d', pathGenerator)//set the d attribute of these paths based on the country
                 //d is a string containing a series of path commands that define the path to be drawn ----> https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d
                 .attr('fill', d=> colorScale(colorValue(d)))//fill is based on income data
+                .attr('font-style', 'Ubuntu')//tried to do css styling on text but had no effect
                 .append('title') //can't just add attribute because this is child of svg
                 .on('click', d => { //tried to create image - no errors but nothing is happening
                     if (countryRows[d.id].continent = Africa){ //not working, but also not showing any errors
@@ -134,12 +136,16 @@ d3.json('https://unpkg.com/world-atlas@1.1.4/world/110m.json') //load data of wo
                     }
                      //going down the continent list
                     })
-                .text(d => countryRows[d.id].name + ": " + colorValue(d).substring(3) + ", with "+ countryRows[d.id].income_grp.substring(3).toLowerCase() + " in " + countryRows[d.id].continent + ".")
+                .text(d => countryRows[d.id].name + ": " + colorValue(d).substring(3) + ", with "+ countryRows[d.id].income_grp.substring(3).toLowerCase() + ", in " + countryRows[d.id].continent + ".")
                 
             });
 
-   /* Create <img> element in the HTML code.
-Add style to <img> element and set display properties to none.
-Create a JavaScript “show()” function that can access the image and change the display property to block.
-Add button in HTML code which calls “show()” function when user clicks on it.
+   /* https://www.geeksforgeeks.org/how-to-show-images-on-click-using-html/
+   List of steps to create images that change on click:
+   1Create <img> element in the HTML code.
+    2Add style to <img> element and set display properties to none.
+3   Create a JavaScript “show()” function that can access the image and change the display property to block.
+4   Add button in HTML code which calls “show()” function when user clicks on it.
+
+
 //go to d3 to see how to style css of .text*/
