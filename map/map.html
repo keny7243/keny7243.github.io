@@ -2,6 +2,7 @@
 <!-- https://www.youtube.com/watch?v=Qw6uAg3EO64&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=20 : making a map tutorial-->
 <!-- https://www.youtube.com/watch?v=9ZB1EgaJnBU&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=23 : adding interactive elements-->
 <!-- https://www.youtube.com/watch?v=OoZ0LWD9KUs&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=32 : chloropleth map - adding data to countries-->
+<!-- https://www.youtube.com/watch?v=E9PhCimWSVQ : interactive filtering -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +20,7 @@
     <script defer src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script> <!-- library that can be used to convert topojson 
       (map data) to geojson (what d3 reads)-->
     <script defer src="map.js"></script>
-    <title>Making a map with D3.js</title>
+    <title>The Status of Countries</title>
 </head>
 <body>
   <nav>
@@ -41,14 +42,12 @@
       <li><a href="../https://kerstinnyquist.myportfolio.com/">Portfolio</a></li>
     </ul>
 </nav>
-<h1>Country Info</h1>
+<h1>The Status of Countries</h1>
 <hr>
 <div class="mappagegrid">
   <div id="container" class="svg-container">
-  
   <svg class="wholething" width="960" height="500"></svg>
   </div>
-  <div class="information"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Flag_of_Kosovo.svg/1200px-Flag_of_Kosovo.svg.png" alt=""></div>
-</div>
+  <!--<div class="information"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Flag_of_Kosovo.svg/1200px-Flag_of_Kosovo.svg.png" alt=""></div>-->
 </body>
 </html>

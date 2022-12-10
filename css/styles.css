@@ -349,7 +349,7 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
     }
 
     .col{
-        height: 23em;
+        height: 20em;
         flex:1;
         transition: 0.6s;/*makes grow hover happen slower*/
     }
@@ -360,7 +360,7 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
 
     .col:hover .caption {
         display: block;
-        width: 15em;
+        width: 10em;
         margin-left: .5em;
     }
 
@@ -368,7 +368,7 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
         text-align: left;
     }
     .indeximg {
-        width: 27em;
+        width: 20em;
     }
     /*|Secondary|*/
     .gsetup {
