@@ -1,6 +1,7 @@
 <!-- https://www.youtube.com/watch?v=-RQWC4I2I1s&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=5 ----- making a face (D3.js) tutorial -->
 <!-- https://www.youtube.com/watch?v=Qw6uAg3EO64&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=20 ------------ making a map tutorial-->
 <!-- https://www.youtube.com/watch?v=9ZB1EgaJnBU&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=23 ----------- adding interactive elements-->
+<!-- https://www.youtube.com/watch?v=OoZ0LWD9KUs&list=PL9yYRbwpkykvOXrZumtZWbuaXWHvjD8gi&index=32 ---------- chloropleth map - adding data to countries-->
 
 <!DOCTYPE html>
 <html>
@@ -22,19 +23,25 @@
     <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
     </label>
-    <a href="index.html" class="logo">
+    <a href="../index.html" class="logo">
         <img src="../img/NyquistLogo.png" alt="Logo">
     </a>
-<ul id="navbarlinks">
-    <li><a href="plants.html">Plants</a></li>
-    <li><a href="animals.html">Animals</a></li>
-    <li><a href="forms.html">Forms</a></li>
-    <li><a href="https://kerstinnyquist.myportfolio.com/">Portfolio</a></li>
-    <li><a href="map/map.html">Map</a></li>
-  </ul>
+    <ul id="navbarlinks">
+      <li><a href="../plants.html">Plants</a></li>
+      <li><a href="../animals.html">Animals</a></li>
+      <li><a href="../microbes.html">Microbes</a></li>
+      <li><a href="../forms.html">Forms</a></li>
+      <li><a href="map/map.html">Map</a></li>
+      <li><a href="../https://kerstinnyquist.myportfolio.com/">Portfolio</a></li>
+    </ul>
 </nav>
 <h1>Animal Mascots of Continents</h1>
 <hr>
+<div class="mappagegrid">
+  <!--<div id="container" class="svg-container">
+  </div>-->
   <svg class="wholething" width="960" height="500"></svg>
+  <div class="information"></div>
+</div>
 </body>
 </html>

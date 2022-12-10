@@ -9,14 +9,34 @@ body {
 
   .country {
     fill:#F3B167; /*country colors*/
-    stroke: #FEE0C4; /* country outlines*/
-    stroke-opacity: 0.8;
+    stroke: #FEE0C4; /* country outline color*/
+    stroke-width: 1px; /* country outline width*/
   }
 
   .country:hover {
     fill: #F36D35; /*from cheap tricks link*/
   }
 
-  .wholething {
-    margin-top:40px;
+ /* .svg-container {
+    width: 768px;
+    height: 400px;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+  .svg-content {
+    top: 0;
+    left: 0;
+}*/
+
+.information {
+  width: 400px;
+  height: 500px;
+  background-color:red;
+}
+
+  .mappagegrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
+

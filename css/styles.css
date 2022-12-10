@@ -14,6 +14,7 @@ h1 {
     font-size: 48px;
     line-height: 55px;
     color: #0A152F;
+    margin-left: 15px;
 }
 
 h2 {
@@ -26,7 +27,7 @@ h2 {
 
 hr {    
     border: 1px solid #F3B167;
-    width: 100%;
+    width: 97%;
 }
 
 h3 {
@@ -117,10 +118,10 @@ nav {
     list-style-type: none;
     position:fixed;
     width:100%;
-    height:160px;
+    height:250px;
     background:#8E3529;
-    top: 50px;
-    right: -110%;
+    top: 41px;
+    right: -150%;
     text-align: center;
     transition: all .5s;
     z-index:1;
@@ -128,7 +129,6 @@ nav {
 
 #navbarlinks a{
     color: #FEE0C4;
-    font-size: 20px;
     line-height: 40px;
     text-decoration: none;
     padding: 7px 13px;
@@ -140,14 +140,14 @@ nav {
 }
 
 .logo {
-    padding: 0 20px;
+    padding: 0 5px;
 }
 
 .checkbtn {
     font-size: 40px;
     color: #FEE0C4;
     float:right;
-    margin-right: 40px;
+    margin-right: 20px;
     display:block;
     cursor:pointer;
 }
@@ -157,7 +157,7 @@ nav {
 }
 
 #check:checked ~ #navbarlinks {
-    right: 0;
+    right: -15%;
 }
 
 /*|Index Styling|*/
@@ -166,9 +166,10 @@ nav {
     grid-template-columns: 1fr;
 }
 .container{
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     background: gray;
     width: 100%;
+    margin-left: 20px;
 }
 
 .col{
@@ -182,16 +183,24 @@ nav {
     background: #F36D35;
 }
 .col:nth-child(2){
-    background: #FEE0C4;
+    background: #8E3529;
 }
 .col:nth-child(3){
-    background: #8E3529;
+    background: #FEE0C4;
+}
+
+.col:nth-child(4){
+    background: #efbc82;
+}
+
+.col:nth-child(5){
+    background:#2a406e;
 }
 .col h2{
     text-align: center;
 }
 .indeximg {
-    max-width: 30em;
+    max-width: 25em;
     height:auto;
     position: absolute;
     right:0;
@@ -208,14 +217,12 @@ nav {
 }
 
 /*|Secondary Page Setups*/
-.centergrid {
-    display: grid;
-    grid-template-columns: 1fr 1270px 1fr;
-}
 .gsetup{
     display: grid;
-    grid-template-columns: 470px;
-    width: 100%;
+    grid-template-columns: 450px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .gallery {
     position: relative;
@@ -239,15 +246,15 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
 .cimg:before{
     content:"";
     position: absolute;
-    height:470px;
-    width:470px;
+    height:450px;
+    width:450px;
     background: rgba(142,53,41,0.8);
     z-index:80;
     opacity:0;
 }
 
 .gimg {
-    width: 470px;
+    width: 450px;
 }
 
 .desc {
@@ -255,10 +262,10 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
     text-align: center;
     color: #FEE0C4;
     z-index:81;
-    top: 190px;
+    top: 180px;
     font-size: 18px;
     opacity: 0;
-    width: 460px;
+    width: 440px;
     padding: 5px;
 }
 
@@ -270,6 +277,26 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
 .gallery:hover, .gallery:active .desc {
     opacity: 1;
 }
+
+@media only screen and (max-width:749px){
+#navbarlinks a {
+    font-size: 20px;
+}}
+
+@media only screen and (min-width:750px) and (max-width:999px){
+    #navbarlinks a {
+        font-size: 15px;
+    }}
+
+    #navbarlinks {
+        width:130%;
+        margin-right: 10px;
+    }
+
+@media only screen and (min-width:1000px){
+    #navbarlinks a {
+        font-size: 20px;
+    }}
 
 /*|||Computer Styling|||*/
 @media only screen and (min-width:750px){
@@ -287,11 +314,9 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
         top:0;
         right: 0;
         float:right;
-        margin-right: 20px;
         background-color: transparent;
         text-align: right;
         transition: none;
-        width:75%;
         height:50px;
     }
 
@@ -305,34 +330,40 @@ extra vid on overlaying color and text: https://www.youtube.com/watch?v=exb2ab72
         gap: 5px;
     }
     .container{
-        height: 400px;
-        width:100%;
+        height: 2o0px;
+        width:97%;
         margin: 30px auto;
         display:flex;
     }
     .col{
-        height: 30em;
+        height: 20em;
         flex:1;
+    }
+
+    .indeximg {
+        width: 17em;
     }
     /*|Secondary|*/
     .gsetup {
-        grid-template-columns: 420px 420px 420px;
-        grid-template-rows: 420px 420px;
-        width: 100%;
-        gap: 2px;
+        grid-template-columns: 390px 390px 390px;
+        grid-template-rows: 390px 390px;
+        gap: 1px;
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
     }
     .gimg {
-        width: 420px;
+        width: 390px;
     }
 
     .cimg:before{
-        height:420px;
-        width:420px;
+        height:390px;
+        width:390px;
     }
 
     .desc {
-        top: 175px;
-        width: 410px;
+        top: 145px;
+        width: 390px;
     }
 
     .gallery:hover .cimg:before {       
